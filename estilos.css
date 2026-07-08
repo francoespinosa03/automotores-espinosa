@@ -1,0 +1,547 @@
+
+*{box-sizing: border-box;}
+
+html{scroll-behavior: smooth;}
+
+body{
+    margin: 0 auto;
+    max-width: 1920px;
+    font-family: "Arial", tahoma, sans sans-serif;
+    background-color: #fff;
+    
+}
+
+header, header nav, section, footer {width: 100%}
+
+/* Fuentes  */
+
+h1{
+    margin-top: 0;
+    font-size: 40px;
+    color:  #252525;
+    text-align: center;
+    font-weight: 600;
+}
+
+h2, h3, h4, h5{font-size: 28px;}
+span, p{font-size: 18px;}
+
+header{
+    max-width: 1920px;
+    height: 90px;
+    position: fixed;/* para que flote */
+    top: 0;
+    left: 0;
+    background-color: #b19a63;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.50);
+    z-index: 100;
+
+}
+
+/* Marcadores */
+/* croll-margin-top: es para que cuando toquemos en nosotros quede justo en el titulo de maera pareja */
+#marcador1, 
+#marcador2,
+#marcador3,
+#marcador4{
+    scroll-margin-top: 110px;
+}
+
+#inicio{scroll-margin-top: 110px;}
+
+
+header nav{
+    height: inherit;
+    position: relative;
+
+}
+
+
+#logoEmpresa{
+    width: 200px;
+    position: absolute;
+    top: -13px;
+    left: 12px;
+}
+
+#logoEmpresa img{ width: 100%; height: 90%;} 
+
+#logoEmpresa{
+
+    transition:.3s;
+
+}
+/* estos son para que el logo tenga animacion de crecer un poco */
+#logoEmpresa:hover{
+
+    transform:scale(1.05);
+
+}
+
+nav ul{
+    height: 90px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 100px;
+    list-style: none;
+}
+nav ul a{ text-decoration: none;}
+
+nav ul li {
+    color: #252525;
+    font-weight: 600;
+    height: 90px;
+    display: inline-block;
+    margin-right: -4px;
+    padding: 0 25px;
+    line-height: 90px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    
+}
+
+nav ul li:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+
+
+#bannerPrincipal{
+    height: 610px;
+    margin-top: 90px;
+    background-color: #ccc;
+    background-image: url(../imagenes/bannerPrincipal.png);
+    background-repeat: no-repeat;
+    /* background-position: right bottom -200px; */
+    background-position: center;
+    background-size: cover;
+    /* background-size: 100%; */
+    border-bottom: 12px solid rgb(10, 9, 28);
+
+    display: flex;
+    justify-content: center;
+    padding-top: 90px;
+}
+
+#bannerPrincipal span {
+    font-size: 38px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 6px 6px #000;
+}
+
+/* ---------------------------------- */
+#bannerPrincipal{
+
+    background:
+    linear-gradient(rgba(0,0,0,.20),
+    rgba(0,0,0,.3)),
+    url(../imagenes/bannerPrincipal.png);
+
+    background-size:cover;
+    background-position:center;
+}
+/* -------------------------------------------------- */
+
+main{
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#nosotros{
+    width: 100%;
+    margin: 50px 0;
+    padding: 0 75px;
+   display: flex;
+   /* background-color: aqua; */
+   /* justify-content: center; *//* para mover en el eje horizontal, center deja ambos en el medio */
+   /* justify-content: space-around; *//* deja un espacio a ambos lados y el medio de las dos cosas */
+   /* justify-content: space-evenly */;/* deja un espacio igual entre todos los cosos, uno al lado del otro */
+   justify-content: space-around;/* solo un espacio en el medio entre las dos cosas */
+   align-items: center;/* para mover en el eje vertical */
+   /* flex-direction: column-reverse; *//* para invertir las dos cosas */
+
+}
+
+#infoHistoria {
+    width: 45%;
+}
+#infoHistoria h2 { text-align: center;}
+
+#infoHistoria p { 
+    line-height: 24px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#fotoHistoria {
+    width: 35%;
+}
+#fotoHistoria img {
+    width: 120%;
+}
+
+/* Destacados de la Semana */
+#destacados {
+    margin: 50px 0;
+}
+#destacados h2 {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;/* esto es para que todo el texto este en MAYUSCULAS */
+}
+#autos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fotoAutos {/* el . es para llamar al class */
+    width: 23%;
+    height: 370px;
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 4px;/* pone la esquinas de la caja redondeadas */
+    margin-bottom: 24px;
+    position: relative;/* para bajar el texto de la caja */
+    transition: 0.5s;/* efecto que al apoyar el mouse crece */
+}
+
+#a1 {
+    background-image: url(../imagenes/destacados/imagen1corolla.png);
+}
+#a2 {
+    background-image: url(../imagenes/destacados/imagen2cronos.png);
+}
+#a3 {
+    background-image: url(../imagenes/destacados/imagen3peugeot.png);
+}
+#a4 {
+    background-image: url(../imagenes/destacados/imagen4onix.png);
+}
+
+.fotoAutos h3 {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    padding: 12px 0;
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.60);
+}
+.fotoAutos:hover {
+    transform: scale(1.05);/* crecimiento de la imagen cuando pasamos el raton */
+}
+
+#destacadosA h2 {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;/* esto es para que todo el texto este en MAYUSCULAS */
+}
+
+/* -------------------------------------- */
+
+#destacadosC {
+    margin: 50px 0;
+}
+#destacadosC h2 {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;/* esto es para que todo el texto este en MAYUSCULAS */
+}
+#CAMIONETAS {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fotoCamionetas {/* el . es para llamar al class */
+    width: 23%;
+    height: 370px;
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 4px;/* pone la esquinas de la caja redondeadas */
+    margin-bottom: 24px;
+    position: relative;/* para bajar el texto de la caja */
+    transition: 0.5s;/* efecto que al apoyar el mouse crece */
+}
+
+
+#c1 {
+    background-image: url(../imagenes/destacados/1camionetashilux.png);
+}
+#c2 {
+    background-image: url(../imagenes/destacados/2camionetasranger\ \(1\).png);
+}
+#c3 {
+    background-image: url(../imagenes/destacados/3camionetaamarok.png);
+}
+#c4 {
+    background-image: url(../imagenes/destacados/4camionetafiat.png);
+}
+
+.fotoCamionetas h3 {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    padding: 12px 0;
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.60);
+}
+
+.fotoCamionetas:hover {
+    transform: scale(1.05);/* crecimiento de la imagen cuando pasamos el raton */
+}
+
+#destacadosC h2 {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;}
+
+/* ---------------------------------------- */
+
+#consejos {
+    margin: 50px 0;
+}
+
+#consejos h3 {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#videoYoutube {
+    width: 100%;
+    height: 600px;
+    border: 6px solid #7e7011;}
+    
+
+/* Categorias */
+/* #categorias{margin: 50px 0;}
+
+#cardCategorias{
+    display: flex;
+    justify-content: space-between;
+}
+
+#cardCategorias .card{
+    width: 23%;
+    padding: 10px 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.card img{width: 100%; margin-bottom: 10px;}
+
+.card h3{font-size: 22px;}
+
+.card a{
+    color:#2c5636;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.card a:hover{color: #4f9623; text-decoration: underline;}
+ */
+
+ /* ==========================
+   SECCIÓN BLOG / NOTICIAS
+========================== */
+
+.noticias {
+    
+    padding: 70px 8%;
+    background: #ffffff;
+}
+
+.noticiasTitulo {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #666;
+    margin-bottom: 50px;
+    font-size: 1rem;
+}
+
+.bloquesNoticias {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.blog-card {
+    background: #fff;
+    width: 300px;
+    height: 400px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: .3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 22px;
+    padding-top: 2px;
+}
+
+.blog-content h3 {
+    margin: 12px 0;
+    color: #222;
+    font-size: 1.35rem;
+    text-align: center;
+}
+
+.blog-content p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+/* ==========================
+   RESPONSIVE
+==========================  es para que se vean bien en los celulares*/
+
+/* @media (max-width: 1100px) {
+    .blog-card {
+        width: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .blog-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-card {
+        width: 95%;
+        max-width: 450px;
+    }
+
+} */
+
+/* ----------FOOTER----------------------------------- */
+
+footer {
+    background-color: #252525;
+    padding: 50px 50px 10px;
+}
+
+#logoFooter{
+    margin: 0 auto 50px auto;
+    width: 350px;
+    border-radius: 8px;
+}
+
+#logoFooter img{width: 100%; border-radius: 8px;}
+
+/* Redes Sociales */
+#redesSociales{
+    width: 133px;
+    margin: 10px auto;
+}
+
+#redesSociales span{
+    width: inherit;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;}
+
+#redes a{text-decoration: none;}
+#redes img{width: 64px;}
+
+/* Mapa de Ubicación */
+#ubicacion{
+    width: 750px;
+    margin: 50px auto;
+}
+
+#ubicacion address{
+    color: white;
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
+}
+
+#mapa{
+    width: 100%;
+    height: 450px;
+    margin-top: 24px;
+    border: 6px solid #7e7011;
+}
+
+#infoGeneral{
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#infoGeneral p{color: #fff; text-align: center;}
+
+#infoGeneral p a{color: white; text-decoration: none;}
+
+#infoGeneral p a:hover{
+    color: #7e7011 ;
+    text-decoration: underline;
+    margin: 0;
+}
+
+img{max-width:100%;height:auto;}
+@media (max-width:1024px){
+main{width:95%;}
+#nosotros{padding:0 20px;}
+#autos,#CAMIONETAS{flex-wrap:wrap;gap:20px;justify-content:center;}
+.fotoAutos,.fotoCamionetas{width:45%;}
+.blog-card{width:45%;}
+}
+@media (max-width:768px){
+header{height:auto;position:relative;}
+header nav{display:flex;flex-direction:column;align-items:center;}
+#logoEmpresa{position:static;width:180px;margin:10px 0;}
+nav ul{position:static;display:flex;flex-direction:column;width:100%;height:auto;}
+nav ul li{display:block;width:100%;height:60px;line-height:60px;text-align:center;border-right:none;border-top:1px solid rgba(0,0,0,.2);}
+#bannerPrincipal{margin-top:0;height:350px;padding-top:40px;}
+#bannerPrincipal span{font-size:28px;text-align:center;padding:20px;}
+#nosotros{flex-direction:column;padding:20px;}
+#infoHistoria,#fotoHistoria{width:100%;}
+#fotoHistoria img{width:100%;}
+#autos,#CAMIONETAS{flex-direction:column;align-items:center;}
+.fotoAutos,.fotoCamionetas,.blog-card{width:90%;}
+#videoYoutube{height:250px;}
+#logoFooter{width:220px;}
+#ubicacion{width:100%;}
+#mapa{height:280px;}
+h1{font-size:30px;}h2{font-size:24px;}h3{font-size:20px;}p,span{font-size:16px;}
+}
